@@ -64,8 +64,7 @@ function sumAndMultiply(a, b, c) { //eslint-disable-line
   //   let message2= `The product of ${a} and ${b} and ${c} is ${product}.`;
   let message2 = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + product + '.';
   console.log (message2);
-
-  return[sum, product, message1, message2];
+  return[sumNumber, product, message1, message2];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -84,6 +83,7 @@ IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
 
 // Write your code here
+
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
