@@ -11,7 +11,7 @@ Test this function by hand in the console to get it working, and when you think 
 function sum(a, b) { //eslint-disable-line
   console.log(a,b);
   let sumNumber = a + b;
-//   let message = 'The sum of ' + a + ' and ' + b + ' is ' + sumNumber + '.';
+  let message = 'The sum of ' + a + ' and ' + b + ' is ' + sumNumber + '.';
   return [sumNumber, message];
 }
 
@@ -30,7 +30,10 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
-
+  console.log(a,b);
+  let sumAndMultiply = a * b;
+  let message = 'The product of ' + a + ' and ' + b + ' is ' + sumAndMultiply + '.';
+  return [sumAndMultiply, message];
 }
 
 // Here is the test for multiply(); uncomment it to run it
