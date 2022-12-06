@@ -9,7 +9,7 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
-  console.log(a,b);
+  // console.log(a,b);
   let sumNumber = a + b;
   let message = 'The sum of ' + a + ' and ' + b + ' is ' + sumNumber + '.';
   return [sumNumber, message];
@@ -30,7 +30,7 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
-  console.log(a,b);
+  // console.log(a,b);
   let sumAndMultiply = a * b;
   let message = 'The product of ' + a + ' and ' + b + ' is ' + sumAndMultiply + '.';
   return [sumAndMultiply, message];
@@ -55,15 +55,15 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
   let sumNumber = sum(a, sum(b,c)[0])[0];
-  console.log(sumNumber);
+  // console.log(sumNumber);
   let product = multiply(a, multiply(b, c)[0])[0];
-  console.log(product);
+  // console.log(product);
   //   let message1 = `${a} and ${b} and ${c} sum to ${sumNumber}.`;
   let message1 = a + ' and ' + b + ' and ' + c + ' sum to ' + sumNumber + '.';
-  console.log(message1);
+  // console.log(message1);
   //   let message2= `The product of ${a} and ${b} and ${c} is ${product}.`;
   let message2 = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + product + '.';
-  console.log (message2);
+  // console.log (message2);
   return[sumNumber, product, message1, message2];
 }
 
@@ -86,13 +86,22 @@ Test this function by hand in the console to get it working, and when you think 
 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
-function sumArray(sumArr) { //eslint-disable-line
+
+function sumArray(sumArr) { //eslint-disable-line 
+  
+  let theSum = sum(sumArr[0], sum(sumArr[1], sumArr[2])[0])[0];
+  console.log('theSum', theSum);
+  let message = sumArr + ' was passed in as an array of numbers, and ' + theSum + ' is their sum' + '.';
+  console.log('the message',message);
+  return [theSum, message];
+  
+  // TODD: Here is the test for sumArray (); uncomment it to run it testSumArray (testArray)
 
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
